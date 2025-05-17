@@ -465,14 +465,14 @@
         }
 
         /* Section 7 - Image Full */
-        .full-image {
-            height: auto;
+      .full-image {
+    background: url('images/orbitefinalisation.jpg') center/cover no-repeat;
     width: 100%;
-    background: url('orbitefinalisation.jpg') center center no-repeat;
-    background-size: contain;
-    aspect-ratio: 16/9; /* ou retire si tu veux pas de hauteur fixe */
-    padding: 4rem 0; /* facultatif, pour de l'espace autour */
-        }
+    min-height: 300px; /* 📱 minimum raisonnable sur mobile */
+    height: 50vh;       /* adaptable */
+    background-position: center center;
+}
+
 
         /* Pied de page */
         footer {
