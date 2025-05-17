@@ -14,22 +14,27 @@
             --dark: #2c3e50;
         }
    
-    @keyframes textReveal {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+   @keyframes textReveal {
+    0% {
+        max-width: 0;
+        opacity: 0;
+    }
+    100% {
+        max-width: 100%;
+        opacity: 1;
+    }
 }
 
+
 .reveal-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--secondary);
-  animation: textReveal 2.5s steps(40, end) forwards;
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid var(--secondary);
+    animation: textReveal 2.5s ease-out forwards;
+    white-space: normal; /* ← Important ! */
+    color: #000; /* noir */
 }
+
 
     <style>
         /* Reset & Base */
@@ -147,7 +152,8 @@
             gap: 2.5rem;
         }
         .service-card {
-            background: rgba(255, 255, 255, 0.4);
+             background: #fff;
+            color: #000; /* noir */
             border-radius: 10px;
             padding: 2.5rem;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
