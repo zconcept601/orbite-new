@@ -486,24 +486,35 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .menu-btn {
-                display: block;
-            }
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #fff;
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            nav.active {
-                display: flex;
-            }
+       @media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        background: #fff;
+        padding: 0;
+        transition: all 0.4s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        max-height: 500px; /* assez pour contenir tous les liens */
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem;
+    }
+}
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
@@ -714,8 +725,10 @@
 
     <!-- Pied de page -->
     <footer>
-        <p>Siège social : Ouagadougou, Burkina Faso</p>
-        <p>©2035 by Orbite services Group</p>
+        <p>Siège social :/p>
+        <p>Ouagadougou, Burkina Faso</p>
+        
+        <p>©2025 by Orbite services Group</p>
     </footer>
 
     <script>
