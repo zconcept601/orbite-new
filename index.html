@@ -68,10 +68,18 @@
             align-items: center;
             padding: 1rem 5%;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
+       .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark); /* ou #000 */
+}
+
         .logo-img {
             height: 50px;
             animation: pulse 2s infinite;
@@ -522,7 +530,7 @@
     <header>
         <div class="logo-container">
             <img src="logo-orbite.jpg" alt="ORBITE SERVICES" class="logo-img">
-
+            <span class="logo-text">ORBITE SERVICES</span>
         </div>
         <div class="menu-btn">☰</div>
         <nav>
